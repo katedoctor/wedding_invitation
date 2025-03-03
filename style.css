@@ -1,0 +1,361 @@
+:root {
+    --main-color: #384A7B;
+}
+
+
+body {
+    margin: 0;
+}
+
+.container {
+    background: linear-gradient(to bottom, #FEFCF4 0%, #FEFCF4 40%, #c1d1fd 100%);
+    height: 100%;
+    margin: 0;
+}
+
+.first-page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.second-page {
+    position: relative;
+    height: 100%;
+}
+
+.third-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 15vh;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.p-relative {
+    position: relative;
+}
+
+/*FIRST PAGE*/
+
+/*.main-text {*/
+/*    font-family: 'Amatic SC', cursive;*/
+/*    font-size: 7rem;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    letter-spacing: 4px;*/
+/*    margin-bottom: 3rem;*/
+/*}*/
+/*.main-text_and {*/
+/*    line-height: 0.2;*/
+/*    margin-top: 27px;*/
+/*}*/
+
+
+.text_img {
+    width: 41vw;
+}
+
+.first-page_img-wrap {
+    display: flex;
+}
+
+.main_img {
+    width: 44vw;
+    max-width: 630px;
+    clip-path: inset(0 0 63px 0);
+    position: absolute;
+    bottom: -63px;
+    right: 7vw;
+    min-width: 500px;
+    animation: wave 1s ease-in-out 2;
+}
+
+.glasses {
+    width: 220px;
+    position: absolute;
+    top: 62vh;
+}
+
+.first-page_text {
+    position: absolute;
+    top: 9vh;
+    left: 16vw;
+    color: var(--main-color);
+}
+
+.invitation-text {
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2.4rem;
+    width: 39vw;
+    max-width: 570px;
+    margin: 2rem auto 0;
+    letter-spacing: 3px;
+}
+
+.rings_img {
+    width: 43px;
+    margin: 0 24px;
+}
+
+.first-page_divider {
+    height: 1px;
+    width: 10vw;
+    background: var(--main-color);
+}
+
+.start_img {
+    width: 65px;
+    position: absolute;
+    top: 10vh;
+    right: min(130px, 17vw);
+}
+
+.cake_img {
+    width: 13vw;
+    position: absolute;
+    right: -4vw;
+    top: 56vh;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+}
+
+
+/*SECOND PAGE*/
+
+.page_divider {
+    width: 25px;
+    position: absolute;
+    left: calc(50vw - 10px);
+    top: -25px;
+    transform: rotate(180deg);
+    animation: jump 1s ease-in-out 3;
+    animation-delay: 4s;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0) rotate(180deg);
+    }
+    50% {
+        transform: translateY(-60px) rotate(180deg); /* Moves down */
+    }
+}
+
+/*.car_img {*/
+/*    width: 22vw;*/
+/*    margin-left: 1rem;*/
+/*}*/
+
+/*.second-page_wrap {*/
+/*    padding-top: 20vh;*/
+/*    gap: 1rem;*/
+/*}*/
+
+/*.calendar_img {*/
+/*    width: 28px;*/
+/*    margin-right: 12px;*/
+/*}*/
+
+/*.map_img {*/
+/*    width: 28px;*/
+/*    margin-right: 8px;*/
+/*}*/
+
+/*.date_text {*/
+/*    font-size: 2rem;*/
+/*    font-family: 'Pacifico', cursive;*/
+/*    color: var(--main-color);*/
+/*}*/
+
+/*.place_text {*/
+/*    font-size: 1.7rem;*/
+/*    font-family: 'Pacifico', cursive;*/
+/*    color: var(--main-color);*/
+/*}*/
+
+/*.place_text_and {*/
+/*    white-space: break-spaces;*/
+/*}*/
+
+/*.flower_img {*/
+/*    width: 2rem;*/
+/*}*/
+
+.doodles_wrap {
+    position: relative;
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 26vh;
+}
+
+.candle_img {
+    position: absolute;
+    left: 9vw;
+    width: 4.5vw;
+    top: 37vh;
+}
+
+.disco_img {
+    position: absolute;
+    left: 17vw;
+    width: 10vw;
+    top: -6vh;
+    transform: rotate(7deg);
+}
+
+.sparkle_img {
+    position: absolute;
+    left: 16vw;
+    width: 6vw;
+    top: 11vh;
+    transform: rotate(3deg);
+}
+
+.map_img {
+    position: absolute;
+    top: 47vh;
+    left: 26vw;
+    width: 5.5vw;
+}
+
+.wedding_cake_img {
+    position: absolute;
+    left: calc(50% - 7vw);
+    width: 16vw;
+    max-width: 290px;
+    top: 27vh;
+}
+
+.lemon_img {
+    position: absolute;
+    width: 3.5vw;
+    left: 58%;
+    top: 60vh;
+}
+
+.car_img {
+    position: absolute;
+    left: 50vw;
+    width: 11vw;
+    top: 32vh;
+}
+
+.champanie_img {
+    position: absolute;
+    width: 2.3vw;
+    right: 13vw;
+    top: 7vh;
+    transform: rotate(-4deg);
+}
+
+.hearts_img {
+    position: absolute;
+    right: 8.5vw;
+    width: 7vw;
+    top: 11vh;
+}
+
+.date_text {
+    margin-top: 48vh;
+    font-size: 2.5rem;
+    font-family: 'EB Garamond', cursive;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.place_text {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'Amatic SC', cursive;
+    color: var(--main-color);
+    margin-top: 24px;
+    letter-spacing: 1px;
+}
+
+.cocktail_wrap {
+    margin-top: 19vh;
+}
+
+.cocktail_divider_img {
+    width: 11vw;
+}
+
+.cocktail_img {
+    width: 8vw;
+    margin: 0 1vw;
+}
+
+.drive_text {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-top: 16px;
+    font-family: 'Amatic SC', cursive;
+}
+
+/*THIRD PAGE*/
+
+.brides_wrap, .dress-code_wrap {
+    width: 50vw;
+}
+
+.dress-code_wrap {
+    padding: 0 10vw;
+}
+
+.brides_img {
+    width: 25vw;
+    left: 19vw;
+    top: 0;
+    position: relative;
+}
+
+.candles_img {
+    position: absolute;
+    width: 13vw;
+    left: 8vw;
+    top: 35vh;
+    z-index: 2;
+}
+
+.dress-code-text {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'EB Garamond', serif;
+    color: var(--main-color);
+
+}
+
+.dress-code-text_and {
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin-top: 1vh;
+    display: inline-block;
+}
