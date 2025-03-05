@@ -451,7 +451,7 @@ body {
         background-position: center center;
         opacity: 0.1;
         width: 30%;
-        transition: width 2.5s ease, opacity 0.5s ease;
+        transition: width 1.5s ease, opacity 1s ease;
 
         &:hover {
             width: 40%;
