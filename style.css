@@ -7,8 +7,9 @@ body {
     margin: 0;
 }
 
+
 .container {
-    background: linear-gradient(to bottom, #FEFCF4 0%, #FEFCF4 40%, #c1d1fd 100%);
+    background: linear-gradient(to bottom, #FEFCF4 0%, #FEFCF4 40%, #c1d1fd 80%, #384A7B 100%);
     height: 100%;
     margin: 0;
 }
@@ -26,11 +27,11 @@ body {
 
 .third-page {
     position: relative;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: stretch;
-    padding-top: 15vh;
+    padding-top: 20vh;
 }
 
 .flex-center {
@@ -45,26 +46,29 @@ body {
     justify-content: space-between;
 }
 
+.flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .p-relative {
     position: relative;
 }
 
-/*FIRST PAGE*/
+.forth_page {
+    height: 100%;
+    padding: 18vh 10% 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-/*.main-text {*/
-/*    font-family: 'Amatic SC', cursive;*/
-/*    font-size: 7rem;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    letter-spacing: 4px;*/
-/*    margin-bottom: 3rem;*/
-/*}*/
-/*.main-text_and {*/
-/*    line-height: 0.2;*/
-/*    margin-top: 27px;*/
-/*}*/
+    > div {
+        width: 50%;
+    }
+}
+
+/*FIRST PAGE*/
 
 
 .text_img {
@@ -82,7 +86,7 @@ body {
     position: absolute;
     bottom: -63px;
     right: 7vw;
-    min-width: 500px;
+    min-width: 300px;
     animation: wave 1s ease-in-out 2;
 }
 
@@ -166,46 +170,6 @@ body {
     }
 }
 
-/*.car_img {*/
-/*    width: 22vw;*/
-/*    margin-left: 1rem;*/
-/*}*/
-
-/*.second-page_wrap {*/
-/*    padding-top: 20vh;*/
-/*    gap: 1rem;*/
-/*}*/
-
-/*.calendar_img {*/
-/*    width: 28px;*/
-/*    margin-right: 12px;*/
-/*}*/
-
-/*.map_img {*/
-/*    width: 28px;*/
-/*    margin-right: 8px;*/
-/*}*/
-
-/*.date_text {*/
-/*    font-size: 2rem;*/
-/*    font-family: 'Pacifico', cursive;*/
-/*    color: var(--main-color);*/
-/*}*/
-
-/*.place_text {*/
-/*    font-size: 1.7rem;*/
-/*    font-family: 'Pacifico', cursive;*/
-/*    color: var(--main-color);*/
-/*}*/
-
-/*.place_text_and {*/
-/*    white-space: break-spaces;*/
-/*}*/
-
-/*.flower_img {*/
-/*    width: 2rem;*/
-/*}*/
-
 .doodles_wrap {
     position: relative;
     width: 80vw;
@@ -217,14 +181,14 @@ body {
     position: absolute;
     left: 9vw;
     width: 4.5vw;
-    top: 37vh;
+    top: max(23vw, 300px);
 }
 
 .disco_img {
     position: absolute;
     left: 17vw;
     width: 10vw;
-    top: -6vh;
+    top: -1vw;
     transform: rotate(7deg);
 }
 
@@ -238,7 +202,7 @@ body {
 
 .map_img {
     position: absolute;
-    top: 47vh;
+    bottom: -18vw;
     left: 26vw;
     width: 5.5vw;
 }
@@ -255,7 +219,7 @@ body {
     position: absolute;
     width: 3.5vw;
     left: 58%;
-    top: 60vh;
+    bottom: -22vw;
 }
 
 .car_img {
@@ -299,7 +263,7 @@ body {
 }
 
 .cocktail_wrap {
-    margin-top: 19vh;
+    margin-top: 16px;
 }
 
 .cocktail_divider_img {
@@ -316,7 +280,7 @@ body {
     font-size: 2rem;
     font-weight: 600;
     color: var(--main-color);
-    margin-top: 16px;
+    margin-top: 19vh;
     font-family: 'Amatic SC', cursive;
 }
 
@@ -328,6 +292,8 @@ body {
 
 .dress-code_wrap {
     padding: 0 10vw;
+    font-family: 'EB Garamond', serif;
+    color: var(--main-color);
 }
 
 .brides_img {
@@ -340,22 +306,156 @@ body {
 .candles_img {
     position: absolute;
     width: 13vw;
-    left: 8vw;
-    top: 35vh;
+    left: 9vw;
+    top: 23vw;
     z-index: 2;
 }
 
 .dress-code-text {
-    text-align: center;
-    font-size: 1.8rem;
+    text-align: left;
+    font-size: clamp(22px, 1.5vw, 4vw);
     font-family: 'EB Garamond', serif;
+    /*font-family: 'Caveat', serif;*/
     color: var(--main-color);
 
 }
 
-.dress-code-text_and {
+.dress-code {
     letter-spacing: 1px;
-    font-size: 2rem;
+    font-size: clamp(24px, 1.6vw, 4.2vw);
     margin-top: 1vh;
     display: inline-block;
+}
+
+.dress-code-text_and {
+    font-size: clamp(22px, 1.5vw, 4vw);
+    font-family: 'Caveat', serif;
+    margin-top: 3vh;
+}
+
+.hills_img {
+    width: 3vw;
+    margin-right: 1vw;
+    color: #e5b6bb
+}
+
+.sunglasses_img {
+    width: 3vw;
+    margin-right: 1vw;
+}
+
+.color_text {
+    font-size: 1.8vw;
+    font-family: 'EB Garamond', serif;
+    color: var(--main-color);
+    font-weight: normal;
+}
+
+.color_img {
+    width: 5vw;
+    margin-right: 2vw;
+}
+
+.color_img:last-of-type {
+    margin-right: 0;
+}
+
+.colors_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6vh;
+    gap: 3vh;
+}
+
+.dynamic-circle-svg {
+    width: 20vw;
+}
+
+.text_circle {
+    background: url("assets/circle.svg") no-repeat top left;
+    background-size: 5vw;
+    width: 20vw;
+    color: red;
+}
+
+
+/*FORTH PAGE*/
+
+.photo_wrap {
+    display: flex;
+    position: relative;
+}
+
+.volodia_img {
+    height: 45vw;
+}
+
+.kate_img {
+    height: 39vw;
+    position: absolute;
+    top: 7vw;
+    right: 0;
+}
+
+.emoji_img {
+    width: 1vw;
+}
+
+.waiting_text {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(24px, 2vw, 5vw);
+    text-align: center;
+    color: var(--main-color);
+    font-weight: normal;
+}
+
+.waiting_text_emoji {
+    font-size: clamp(22px, 1.8vw, 5vw);
+    line-height: 1.5rem;
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 6px;
+}
+
+.candelabrum_img {
+    width: 15vw;
+    position: absolute;
+    top: 16vh;
+    left: 44vw;
+}
+
+.ps_text {
+    margin-top: 2vw;
+    text-align: center;
+    font-family: 'Caveat', serif;
+    font-size: clamp(22px, 1.8vw, 5vw);
+    color: var(--main-color);
+}
+
+
+.slider {
+    display: flex;
+    margin-top: 3vh;
+    mask-image: linear-gradient(90deg, #0000, #000 10% 90%, #0000),
+    linear-gradient(0deg, transparent, black 2%, black 98%, transparent);
+    mask-mode: alpha;
+    mask-composite: intersect;
+
+    .slide {
+        height: 400px;
+        position: relative;
+        z-index: 10;
+        border: 1px solid #fff;
+        background-size: cover;
+        background-position: center center;
+        opacity: 0.1;
+        width: 30%;
+        transition: width 2.5s ease, opacity 0.5s ease;
+
+        &:hover {
+            width: 40%;
+            opacity: 1;
+        }
+    }
 }
