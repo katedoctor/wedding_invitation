@@ -88,6 +88,9 @@ body {
     @media screen and (max-width: 768px) {
         width: 75vw;
     }
+    @media screen and (max-width: 1024px) {
+        width: 55vw;
+    }
 }
 
 .first-page_img-wrap {
@@ -113,6 +116,15 @@ body {
         transform: rotate(-4deg);
         animation: wavemobile 1s ease-in-out 2;
     }
+    @media screen and (max-width: 1024px) {
+        right: 0;
+        width: 51vw;
+        max-width: unset;
+        clip-path: unset;
+        bottom: -50px;
+        transform: rotate(-4deg);
+        animation: wavemobile 1s ease-in-out 2;
+    }
 }
 
 .glasses {
@@ -123,6 +135,11 @@ body {
     @media screen and (max-width: 768px) {
         width: 31vw;
         top: 74vh;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 31vw;
+        top: 58vh;
     }
 
 }
@@ -141,6 +158,14 @@ body {
         padding-top: 15vh;
         position: static;
     }
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 11vh;
+        position: static;
+    }
 }
 
 .invitation-text {
@@ -157,7 +182,12 @@ body {
         margin: 2vh 0 0;
         max-width: unset;
         width: 80vw;
-
+    }
+    @media screen and (max-width: 1024px) {
+        margin: 2vh 0 0;
+        max-width: unset;
+        width: 70vw;
+        font-size: 32px;
     }
 }
 
@@ -175,6 +205,9 @@ body {
     background: var(--main-color);
     @media screen and (max-width: 768px) {
         width: 20vw;
+    }
+    @media screen and (max-width: 1024px) {
+        width: 21vw;
     }
 }
 
@@ -201,6 +234,12 @@ body {
     @media screen and (max-width: 768px) {
         width: 21vw;
         top: 49vh;
+        right: -7vw;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 18vw;
+        top: 39vh;
         right: -7vw;
     }
 }
@@ -269,13 +308,20 @@ body {
         transform: rotate(-3deg);
     }
 
+    @media screen and (max-width: 1024px) {
+        width: 7vw;
+        left: 5vw;
+        top: 31vh;
+        transform: rotate(-3deg);
+    }
+
 }
 
 .disco_img {
     position: absolute;
     left: 17vw;
     width: 11vw;
-    top: -4vw;
+    top: -3vw;
     transform: rotate(7deg);
 
     @media screen and (max-width: 768px) {
@@ -283,6 +329,12 @@ body {
         transform: rotate(-7deg);
         left: 6vw;
         top: -3vw;
+    }
+
+    @media screen and (max-width: 1024px) {
+        top: -1vw;
+        left: 14vw;
+        width: 138px;
     }
 }
 
@@ -295,8 +347,14 @@ body {
 
     @media screen and (max-width: 768px) {
         width: 7vw;
-        top: 13vw;
-        left: 9vw;
+        top: 11vw;
+        left: 14vw;
+    }
+
+    @media screen and (max-width: 1024px) {
+        top: 11vw;
+        left: 14vw;
+        width: 6.5vw;
     }
 
 }
@@ -313,6 +371,12 @@ body {
         left: 14vw;
         transform: rotate(-3deg);
     }
+
+    @media screen and (max-width: 1024px) {
+        top: 48vw;
+        left: 24vw;
+        width: 6.5vw;
+    }
 }
 
 .wedding_cake_img {
@@ -326,6 +390,10 @@ body {
         width: 30vw;
         left: calc(50% - 15vw);
     }
+
+    @media screen and (max-width: 1024px) {
+        width: 18vw;
+    }
 }
 
 .lemon_img {
@@ -333,6 +401,12 @@ body {
     width: 3.5vw;
     left: 58%;
     bottom: -22vw;
+
+    @media screen and (max-width: 1024px) {
+        width: 5vw;
+        top: 41.5vh;
+        left: 63%;
+    }
 }
 
 .car_img {
@@ -347,6 +421,13 @@ body {
         top: 27vh;
         right: 8vw;
         transform: rotate(5deg);
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 13vw;
+        top: 28vh;
+        transform: rotate(2deg);
+        left: 54.5vw;
     }
 }
 
@@ -363,6 +444,12 @@ body {
         right: 6vw;
         top: 10vh;
     }
+
+    @media screen and (max-width: 1024px) {
+        width: 4.1vw;
+        transform: rotate(5deg);
+        right: 5.5vw;
+    }
 }
 
 .hearts_img {
@@ -376,6 +463,11 @@ body {
         top: 3vh;
         right: -4vw;
     }
+    @media screen and (max-width: 1024px) {
+        width: 9vw;
+        top: 3vh;
+        right: -1vw;
+    }
 }
 
 .date_text {
@@ -388,6 +480,10 @@ body {
     @media screen and (max-width: 768px) {
         margin-top: 25vh;
         font-size: clamp(25px, 2vw, 3vw)
+    }
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 25vh;
     }
 }
 
@@ -454,6 +550,10 @@ body {
         padding: 0 4vw 0 6vw;
     }
 
+    @media screen and (max-width: 1024px) {
+        padding: 0 6vw;
+    }
+
 }
 
 .brides_img {
@@ -465,6 +565,11 @@ body {
 
     @media screen and (max-width: 768px) {
         width: 30vw;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 32vw;
+        left: 15vw;
     }
 }
 
@@ -481,6 +586,12 @@ body {
         top: 11vh;
     }
 
+    @media screen and (max-width: 1024px) {
+        width: 20vw;
+        left: 4vw;
+        top: 20vh;
+    }
+
 }
 
 .dress-code-text {
@@ -491,6 +602,10 @@ body {
 
     @media screen and (max-width: 768px) {
         font-size: 18px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 28px;
     }
 
 }
@@ -504,6 +619,9 @@ body {
     @media screen and (max-width: 768px) {
         font-size: 18px;
     }
+    @media screen and (max-width: 1024px) {
+        font-size: 29px;
+    }
 }
 
 .dress-code-text_and {
@@ -513,6 +631,9 @@ body {
 
     @media screen and (max-width: 768px) {
         font-size: 17px;
+    }
+    @media screen and (max-width: 1024px) {
+        font-size: 24px;
     }
 }
 
@@ -524,6 +645,10 @@ body {
     @media screen and (max-width: 768px) {
         width: 10vw;
     }
+
+    @media screen and (max-width: 1024px) {
+        width: 6vw;
+    }
 }
 
 .sunglasses_img {
@@ -532,6 +657,10 @@ body {
 
     @media screen and (max-width: 768px) {
         width: 10vw;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 6vw;
     }
 }
 
@@ -544,6 +673,10 @@ body {
     @media screen and (max-width: 768px) {
         font-size: 16px;
     }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 26px;
+    }
 }
 
 .color_img {
@@ -552,6 +685,10 @@ body {
 
     @media screen and (max-width: 768px) {
         width: 11vw;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 6vw;
     }
 }
 
@@ -606,6 +743,12 @@ body {
         right: 14vw;
         top: -4vh;
     }
+
+    @media screen and (max-width: 1024px) {
+        height: 56vw;
+        position: relative;
+        right: 50px;
+    }
 }
 
 .kate_img {
@@ -618,6 +761,11 @@ body {
         height: 66vw;
         right: -12vw;
         top: 16px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        height: 51vw;
+        left: 50px;
     }
 }
 
@@ -633,6 +781,11 @@ body {
         font-size: 18px;
         font-weight: bold;
         width: 60vw;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 22px;
+        font-weight: bold;
     }
 
 }
@@ -658,6 +811,10 @@ body {
     @media screen and (max-width: 768px) {
         margin-top: 60px;
         font-size: 16px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 80px;
     }
 }
 
