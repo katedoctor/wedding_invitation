@@ -23,6 +23,9 @@ body {
 .second-page {
     position: relative;
     height: 100%;
+    @media screen and (max-width: 768px) {
+        padding-top: 5vh;
+    }
 }
 
 .third-page {
@@ -32,6 +35,10 @@ body {
     justify-content: center;
     align-items: stretch;
     padding-top: 20vh;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 15vh;
+    }
 }
 
 .flex-center {
@@ -66,6 +73,11 @@ body {
     > div {
         width: 50%;
     }
+
+    @media screen and (max-width: 768px) {
+        margin-top: 26vh;
+    }
+
 }
 
 /*FIRST PAGE*/
@@ -73,6 +85,9 @@ body {
 
 .text_img {
     width: 41vw;
+    @media screen and (max-width: 768px) {
+        width: 75vw;
+    }
 }
 
 .first-page_img-wrap {
@@ -88,12 +103,28 @@ body {
     right: 7vw;
     min-width: 300px;
     animation: wave 1s ease-in-out 2;
+
+    @media screen and (max-width: 768px) {
+        right: 0;
+        width: 81vw;
+        max-width: unset;
+        clip-path: unset;
+        bottom: -30px;
+        transform: rotate(-4deg);
+        animation: wavemobile 1s ease-in-out 2;
+    }
 }
 
 .glasses {
     width: 220px;
     position: absolute;
     top: 62vh;
+
+    @media screen and (max-width: 768px) {
+        width: 31vw;
+        top: 74vh;
+    }
+
 }
 
 .first-page_text {
@@ -101,28 +132,50 @@ body {
     top: 9vh;
     left: 16vw;
     color: var(--main-color);
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15vh;
+        position: static;
+    }
 }
 
 .invitation-text {
     font-family: 'EB Garamond', serif;
-    font-size: 2rem;
+    font-size: clamp(18px, 1.8vw, 3vw);
     text-align: center;
     line-height: 2.4rem;
     width: 39vw;
     max-width: 570px;
     margin: 2rem auto 0;
     letter-spacing: 3px;
+
+    @media screen and (max-width: 768px) {
+        margin: 2vh 0 0;
+        max-width: unset;
+        width: 80vw;
+
+    }
 }
 
 .rings_img {
     width: 43px;
     margin: 0 24px;
+    @media screen and (max-width: 768px) {
+        width: 7vw;
+    }
 }
 
 .first-page_divider {
     height: 1px;
     width: 10vw;
     background: var(--main-color);
+    @media screen and (max-width: 768px) {
+        width: 20vw;
+    }
 }
 
 .start_img {
@@ -130,6 +183,13 @@ body {
     position: absolute;
     top: 10vh;
     right: min(130px, 17vw);
+
+    @media screen and (max-width: 768px) {
+        width: 45px;
+        top: 7vh;
+        right: min(130px, 10vw);
+    }
+
 }
 
 .cake_img {
@@ -137,6 +197,12 @@ body {
     position: absolute;
     right: -4vw;
     top: 56vh;
+
+    @media screen and (max-width: 768px) {
+        width: 21vw;
+        top: 49vh;
+        right: -7vw;
+    }
 }
 
 @keyframes wave {
@@ -145,6 +211,15 @@ body {
     }
     50% {
         transform: rotate(1deg);
+    }
+}
+
+@keyframes wavemobile {
+    0%, 100% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(-1deg);
     }
 }
 
@@ -159,6 +234,10 @@ body {
     transform: rotate(180deg);
     animation: jump 1s ease-in-out 3;
     animation-delay: 4s;
+
+    @media screen and (max-width: 768px) {
+        width: 15px;
+    }
 }
 
 @keyframes jump {
@@ -182,14 +261,29 @@ body {
     left: 9vw;
     width: 4.5vw;
     top: max(23vw, 300px);
+
+    @media screen and (max-width: 768px) {
+        width: 8.5vw;
+        left: -1vw;
+        top: max(23vw, 305px);
+        transform: rotate(-3deg);
+    }
+
 }
 
 .disco_img {
     position: absolute;
     left: 17vw;
-    width: 10vw;
-    top: -1vw;
+    width: 11vw;
+    top: -4vw;
     transform: rotate(7deg);
+
+    @media screen and (max-width: 768px) {
+        width: 17vw;
+        transform: rotate(-7deg);
+        left: 6vw;
+        top: -3vw;
+    }
 }
 
 .sparkle_img {
@@ -198,6 +292,13 @@ body {
     width: 6vw;
     top: 11vh;
     transform: rotate(3deg);
+
+    @media screen and (max-width: 768px) {
+        width: 7vw;
+        top: 13vw;
+        left: 9vw;
+    }
+
 }
 
 .map_img {
@@ -205,6 +306,13 @@ body {
     bottom: -18vw;
     left: 26vw;
     width: 5.5vw;
+
+    @media screen and (max-width: 768px) {
+        width: 10vw;
+        top: 36vh;
+        left: 14vw;
+        transform: rotate(-3deg);
+    }
 }
 
 .wedding_cake_img {
@@ -213,6 +321,11 @@ body {
     width: 16vw;
     max-width: 290px;
     top: 27vh;
+
+    @media screen and (max-width: 768px) {
+        width: 30vw;
+        left: calc(50% - 15vw);
+    }
 }
 
 .lemon_img {
@@ -227,6 +340,14 @@ body {
     left: 50vw;
     width: 11vw;
     top: 32vh;
+
+    @media screen and (max-width: 768px) {
+        left: auto;
+        width: 17vw;
+        top: 27vh;
+        right: 8vw;
+        transform: rotate(5deg);
+    }
 }
 
 .champanie_img {
@@ -235,6 +356,13 @@ body {
     right: 13vw;
     top: 7vh;
     transform: rotate(-4deg);
+
+    @media screen and (max-width: 768px) {
+        width: 5vw;
+        transform: rotate(15deg);
+        right: 6vw;
+        top: 10vh;
+    }
 }
 
 .hearts_img {
@@ -242,6 +370,12 @@ body {
     right: 8.5vw;
     width: 7vw;
     top: 11vh;
+
+    @media screen and (max-width: 768px) {
+        width: 12vw;
+        top: 3vh;
+        right: -4vw;
+    }
 }
 
 .date_text {
@@ -250,6 +384,11 @@ body {
     font-family: 'EB Garamond', cursive;
     text-align: center;
     color: var(--main-color);
+
+    @media screen and (max-width: 768px) {
+        margin-top: 25vh;
+        font-size: clamp(25px, 2vw, 3vw)
+    }
 }
 
 .place_text {
@@ -260,6 +399,10 @@ body {
     color: var(--main-color);
     margin-top: 24px;
     letter-spacing: 1px;
+
+    @media screen and (max-width: 768px) {
+        font-size: clamp(32px, 2vw, 3vw)
+    }
 }
 
 .cocktail_wrap {
@@ -268,11 +411,17 @@ body {
 
 .cocktail_divider_img {
     width: 11vw;
+    @media screen and (max-width: 768px) {
+        width: 20vw;
+    }
 }
 
 .cocktail_img {
     width: 8vw;
     margin: 0 1vw;
+    @media screen and (max-width: 768px) {
+        width: 16vw;
+    }
 }
 
 .drive_text {
@@ -282,6 +431,12 @@ body {
     color: var(--main-color);
     margin-top: 19vh;
     font-family: 'Amatic SC', cursive;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 31vh;
+        font-size: 20px;
+    }
+
 }
 
 /*THIRD PAGE*/
@@ -294,6 +449,11 @@ body {
     padding: 0 10vw;
     font-family: 'EB Garamond', serif;
     color: var(--main-color);
+
+    @media screen and (max-width: 768px) {
+        padding: 0 4vw 0 6vw;
+    }
+
 }
 
 .brides_img {
@@ -301,6 +461,11 @@ body {
     left: 19vw;
     top: 0;
     position: relative;
+
+
+    @media screen and (max-width: 768px) {
+        width: 30vw;
+    }
 }
 
 .candles_img {
@@ -309,14 +474,24 @@ body {
     left: 9vw;
     top: 23vw;
     z-index: 2;
+
+    @media screen and (max-width: 768px) {
+        width: 20vw;
+        left: 9vw;
+        top: 11vh;
+    }
+
 }
 
 .dress-code-text {
     text-align: left;
     font-size: clamp(22px, 1.5vw, 4vw);
     font-family: 'EB Garamond', serif;
-    /*font-family: 'Caveat', serif;*/
     color: var(--main-color);
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+    }
 
 }
 
@@ -325,23 +500,39 @@ body {
     font-size: clamp(24px, 1.6vw, 4.2vw);
     margin-top: 1vh;
     display: inline-block;
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+    }
 }
 
 .dress-code-text_and {
     font-size: clamp(22px, 1.5vw, 4vw);
     font-family: 'Caveat', serif;
     margin-top: 3vh;
+
+    @media screen and (max-width: 768px) {
+        font-size: 17px;
+    }
 }
 
 .hills_img {
     width: 3vw;
     margin-right: 1vw;
-    color: #e5b6bb
+    color: #e5b6bb;
+
+    @media screen and (max-width: 768px) {
+        width: 10vw;
+    }
 }
 
 .sunglasses_img {
     width: 3vw;
     margin-right: 1vw;
+
+    @media screen and (max-width: 768px) {
+        width: 10vw;
+    }
 }
 
 .color_text {
@@ -349,11 +540,19 @@ body {
     font-family: 'EB Garamond', serif;
     color: var(--main-color);
     font-weight: normal;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 .color_img {
     width: 5vw;
     margin-right: 2vw;
+
+    @media screen and (max-width: 768px) {
+        width: 11vw;
+    }
 }
 
 .color_img:last-of-type {
@@ -366,6 +565,13 @@ body {
     align-items: center;
     margin-top: 6vh;
     gap: 3vh;
+
+    @media screen and (max-width: 768px) {
+        position: absolute;
+        bottom: -25vh;
+        left: 15vw;
+        width: 70vw;
+    }
 }
 
 .dynamic-circle-svg {
@@ -385,10 +591,21 @@ body {
 .photo_wrap {
     display: flex;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+        width: 40vw;
+    }
 }
 
 .volodia_img {
     height: 45vw;
+
+    @media screen and (max-width: 768px) {
+        height: 76vw;
+        position: relative;
+        right: 14vw;
+        top: -4vh;
+    }
 }
 
 .kate_img {
@@ -396,11 +613,14 @@ body {
     position: absolute;
     top: 7vw;
     right: 0;
+
+    @media screen and (max-width: 768px) {
+        height: 66vw;
+        right: -12vw;
+        top: 16px;
+    }
 }
 
-.emoji_img {
-    width: 1vw;
-}
 
 .waiting_text {
     font-family: 'EB Garamond', serif;
@@ -408,6 +628,13 @@ body {
     text-align: center;
     color: var(--main-color);
     font-weight: normal;
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        font-weight: bold;
+        width: 60vw;
+    }
+
 }
 
 .waiting_text_emoji {
@@ -416,13 +643,9 @@ body {
     display: inline-block;
     margin-top: 4px;
     margin-left: 6px;
-}
-
-.candelabrum_img {
-    width: 15vw;
-    position: absolute;
-    top: 16vh;
-    left: 44vw;
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+    }
 }
 
 .ps_text {
@@ -431,6 +654,11 @@ body {
     font-family: 'Caveat', serif;
     font-size: clamp(22px, 1.8vw, 5vw);
     color: var(--main-color);
+
+    @media screen and (max-width: 768px) {
+        margin-top: 60px;
+        font-size: 16px;
+    }
 }
 
 
@@ -452,6 +680,10 @@ body {
         opacity: 0.1;
         width: 30%;
         transition: width 1.5s ease, opacity 1s ease;
+        @media screen and (max-width: 768px) {
+            height: 205px;
+        }
+
 
         &:hover {
             width: 40%;
