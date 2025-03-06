@@ -58,7 +58,7 @@
         <div class="place_text"><span class="place_text_and">Beautiful&nbsp;Moments Pavilion</span></div>
 
 
-        <div class="drive_text">
+        <div class="drive_text animate-on-scroll">
             привеземо і відвеземо
         </div>
         <div class="flex-center cocktail_wrap">
@@ -85,12 +85,7 @@
                 А ЩЕ...
             </div>
             <div class="colors_wrap">
-                <div class="flex-start">
-                    <img class="color_img green" src="assets/green_circle.svg" alt="hills">
-                    <img class="color_img pink" src="assets/pink_circle.svg" alt="hills">
-                    <img class="color_img blue" src="assets/blue_circle.svg" alt="hills">
-                    <img class="color_img milk" src="assets/circle.svg" alt="hills">
-                </div>
+
 
                 <div class="flex-start color_text">
                     <img class="hills_img" src="assets/hills.png" alt="hills">
@@ -99,6 +94,13 @@
                 <div class="flex-start color_text">
                     <img class="sunglasses_img" src="assets/sunglasses.png" alt="sunglasses"/>
                     захопіть з собою сонячні окуляри
+                </div>
+
+                <div class="flex-start mt-3">
+                    <img class="color_img green" src="assets/green_circle.svg" alt="hills">
+                    <img class="color_img pink" src="assets/pink_circle.svg" alt="hills">
+                    <img class="color_img blue" src="assets/blue_circle.svg" alt="hills">
+                    <img class="color_img milk" src="assets/circle.svg" alt="hills">
                 </div>
             </div>
 
@@ -109,7 +111,7 @@
     <div class="forth_page">
 
         <div class="waiting_text">
-            З НЕТЕРПІННЯМ ЧЕКАЄМО ВАС <span class="waiting_text_emoji">😎</span>
+            З НЕТЕРПІННЯМ ЧЕКАЄМО ВАС НА СВЯТКУВАННІ НАШОГО ШЛЮБУ<span class="waiting_text_emoji">😎</span>
 
             <div class="ps_text">
                 P.S. Якщо ви бажаєте подарити нам квіти, можете зробити це через цю послугу
@@ -134,5 +136,22 @@
 </div>
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 1
+        });
 
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
 </html>
