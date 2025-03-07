@@ -134,8 +134,8 @@ body {
     top: 62vh;
 
     @media screen and (max-width: 768px) {
-        width: 31vw;
-        top: 74dvh;
+        width: 100px;
+        top: 70svh;
     }
 
     @media screen and (min-width: 769px) and  (max-width: 1024px) {
@@ -156,7 +156,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 15vh;
+        padding-top: 10svh;
         position: static;
     }
     @media screen and (min-width: 769px) and (max-width: 1024px) {
