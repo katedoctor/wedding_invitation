@@ -311,7 +311,7 @@ body {
     position: absolute;
     left: 9vw;
     width: 4.5vw;
-    top: max(23vw, 300px);
+    top: 335px;
 
     @media screen and (max-width: 720px) {
         width: 8.5vw;
@@ -379,7 +379,7 @@ body {
 
     @media screen and (max-width: 720px) {
         width: 38px;
-        top: 39svh;
+        top: 40vh;
         left: 14vw;
         transform: rotate(-3deg);
     }
@@ -816,13 +816,11 @@ body {
 
     @media screen and (max-width: 720px) {
         font-size: 17px;
-        font-weight: bold;
         width: 60vw;
     }
 
     @media screen and (min-width: 721px) and (max-width: 1024px) {
         font-size: 22px;
-        font-weight: bold;
     }
 
 }
@@ -854,6 +852,7 @@ body {
 
     @media screen and (min-width: 721px) and (max-width: 1024px) {
         margin-top: 80px;
+        font-size: 20px;
     }
 }
 
