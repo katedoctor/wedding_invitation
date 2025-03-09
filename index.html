@@ -16,7 +16,6 @@
 </head>
 <body>
 <div class="container">
-    <div id="viewport-size">Loading viewport size…</div>
     <div class="first-page">
         <img class="glasses" src="assets/glasses.png" alt="glasses">
         <div class="first-page_img-wrap">
@@ -137,16 +136,6 @@
 
 </body>
 <script>
-
-    function updateViewportSize() {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
-        document.getElementById('viewport-size').textContent = `Viewport Size: ${width}px x ${height}px`;
-    }
-
-    // Update on initial load and on resize
-    window.addEventListener('resize', updateViewportSize);
-    updateViewportSize();
 
     document.addEventListener('DOMContentLoaded', function () {
         const observer = new IntersectionObserver((entries, observer) => {
