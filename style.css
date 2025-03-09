@@ -124,13 +124,13 @@ body {
         animation: wavemobile 1s ease-in-out 2;
     }
     @media screen and (min-width: 721px) and (max-width: 1024px) {
-        right: 0;
+        right: 5px;
         width: 51vw;
         max-width: unset;
-        clip-path: unset;
-        bottom: 0;
+        clip-path: inset(0 0 45px 0);
+        bottom: 45px;
         min-width: 350px;
-        transform: rotate(-4deg);
+        transform: rotate(-1deg);
         animation: wavemobile 1s ease-in-out 2;
     }
 }
@@ -322,7 +322,7 @@ body {
 
     @media screen and (min-width: 721px) and (max-width: 1024px) {
         width: 7vw;
-        left: 5vw;
+        left: 3vw;
         top: 31vh;
         transform: rotate(-3deg);
     }
@@ -385,9 +385,9 @@ body {
     }
 
     @media screen and (min-width: 721px) and (max-width: 1024px) {
-        top: 32vh;
+        top: 37vh;
         left: 24vw;
-        width: 48px;
+        width: 50px;
     }
 }
 
@@ -465,9 +465,9 @@ body {
     }
 
     @media screen and (min-width: 721px) and (max-width: 1024px) {
-        width: 4.1vw;
+        width: 26px;
         transform: rotate(5deg);
-        right: 5.5vw;
+        right: 4.5vw;
     }
 }
 
@@ -486,6 +486,7 @@ body {
         width: 9vw;
         top: 3vh;
         right: -1vw;
+        clip-path: inset(0 0 0 19px);
     }
 }
 
