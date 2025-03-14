@@ -702,13 +702,24 @@ body {
     font-weight: normal;
 
     @media screen and (max-width: 720px) {
-        font-size: 17px;
+        font-size: 14px;
     }
 
     @media screen and (min-width: 721px) and (max-width: 1024px) {
         font-size: 26px;
     }
 
+}
+
+.colors_text {
+    font-family: 'Caveat', serif;
+    font-weight: 200;
+    font-size: 1.7vw;
+    color: #6273a1;
+
+    @media screen and (max-width: 720px) {
+        font-size: 14px;
+    }
 }
 
 .mt-3 {
@@ -742,7 +753,7 @@ body {
 
     @media screen and (max-width: 720px) {
         position: absolute;
-        bottom: -30svh;
+        bottom: -34svh;
         left: 15vw;
         width: 70vw;
     }
