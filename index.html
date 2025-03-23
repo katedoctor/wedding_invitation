@@ -13,6 +13,10 @@
 
     <title>B + K</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/imask" async onload="initIMask()"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -79,7 +83,6 @@
                 Святкування буде на відкритому просторі і щоб вас не покусали комарики,
 
                 dress code: <span class="dress-code">довга сукня та костюм</span>
-                <!--                буде найкращим вибором-->
             </div>
             <div class="dress-code-text_and">
                 А ЩЕ...
@@ -98,10 +101,95 @@
 
 
                 <div class="flex-start mt-3">
-                    <img class="color_img green" src="assets/green_circle.svg" alt="hills">
-                    <img class="color_img pink" src="assets/pink_circle.svg" alt="hills">
-                    <img class="color_img blue" src="assets/blue_circle.svg" alt="hills">
-                    <img class="color_img milk" src="assets/circle.svg" alt="hills">
+                    <div class="p-relative mr-2">
+                        <img class="color_img green" src="assets/green_circle.svg" alt="hills">
+
+                        <svg class="dynamic_color_text"
+                             viewBox="0 0 100 100"
+                             xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                    id="circlePath"
+                                    fill="none"
+                                    d="
+                                          M 10, 50
+                                          a 40,40 0 1,1 80,0
+                                          40,40 0 1,1 -80,0
+                                        "
+                            />
+                            <text stroke="#7480a0" class="svg_text">
+                                <textPath href="#circlePath">
+                                    оливковий
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="p-relative  mr-2">
+                        <img class="color_img pink" src="assets/pink_circle.svg" alt="hills">
+                        <svg class="dynamic_color_text"
+                             viewBox="0 0 100 100"
+                             xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                    id="circlePath"
+                                    fill="none"
+                                    d="
+                                          M 10, 50
+                                          a 40,40 0 1,1 80,0
+                                          40,40 0 1,1 -80,0
+                                        "
+                            />
+                            <text stroke="#7480a0" class="svg_text">
+                                <textPath href="#circlePath">
+                                    персиковий
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="p-relative  mr-2">
+                        <img class="color_img blue" src="assets/blue_circle.svg" alt="hills">
+                        <svg class="dynamic_color_text"
+                             viewBox="0 0 100 100"
+                             xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                    id="circlePath"
+                                    fill="none"
+                                    d="
+                                          M 10, 50
+                                          a 40,40 0 1,1 80,0
+                                          40,40 0 1,1 -80,0
+                                        "
+                            />
+                            <text stroke="#7480a0" class="svg_text">
+                                <textPath href="#circlePath">
+                                    голубенький
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="p-relative  mr-2">
+                        <img class="color_img milk" src="assets/circle.svg" alt="hills">
+                        <svg class="dynamic_color_text"
+                             viewBox="0 0 100 100"
+                             xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                    id="circlePath"
+                                    fill="none"
+                                    d="
+                                          M 10, 50
+                                          a 40,40 0 1,1 80,0
+                                          40,40 0 1,1 -80,0
+                                        "
+                            />
+                            <text stroke="#7480a0" class="svg_text">
+                                <textPath href="#circlePath">
+                                    кремовий
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
                 </div>
                 <div class="colors_text">
                     світлі пастельні кольори
@@ -113,19 +201,48 @@
     </div>
 
     <div class="forth_page">
-
         <div class="waiting_text">
             З НЕТЕРПІННЯМ ЧЕКАЄМО ВАС НА СВЯТКУВАННІ НАШОГО ШЛЮБУ<span class="waiting_text_emoji">😎</span>
 
-            <div class="ps_text">
-                P.S. Якщо ви бажаєте подарити нам квіти, можете зробити це через цю послугу ( very soon )
+            <div class="ps_text" id="flowerText">
+                P.S. Якщо ви бажаєте подарити нам квіти, можете зробити це через цю
+                <button class="flower_btn" onclick="openFlowersForm()">послугу</button>
             </div>
+            <div class="form_wrap">
+                <form id="contactForm" class="form">
+                    <div class="form_input-wrap">
+                        <label class="form_label" for="name">Iм'я:</label>
+                        <input class="form_input" type="text" id="name" name="name" autocomplete="off"
+                               data-lpignore="true"
+                               required>
+                    </div>
+                    <div class="form_input-wrap">
+                        <label class="form_label" for="phone">Номер:</label>
+                        <input class="form_input" type="tel" id="phone" name="phone" autocomplete="off"
+                               data-lpignore="true"
+                               required>
+                    </div>
+                    <div class="form_input-wrap">
+                        <label class="form_label" for="wishes">Побажання на відкритці:</label>
+                        <textarea class="form_input textarea" id="wishes" name="wishes" autocomplete="off"
+                                  data-lpignore="true" rows="4" required></textarea>
+                    </div>
+
+
+                    <button class="form_button" onclick="sendEmail(event)">Надіслати</button>
+                </form>
+
+                <div id="post_form_text">
+                    Дякуємо! Вам передзвонять для уточнення деталей.
+                </div>
+            </div>
+
         </div>
         <div class="photo_wrap">
-            <img class="volodia_img" src="assets/volodia-min.png" alt="volodia">
-            <img class="kate_img" src="assets/kate.png" alt="kate">
+            <img class="babies_img" src="assets/babies.png" alt="we">
         </div>
     </div>
+
 
     <div class="slider">
         <div class="slide" style="background-image:url(assets/carousel/IMG_0864-min.jpg);"></div>
@@ -158,5 +275,70 @@
             observer.observe(el);
         });
     });
+
+    const textarea = document.getElementById('wishes');
+
+    function autoResize() {
+        this.style.height = 'auto';
+        this.style.height = this.scrollHeight + 'px';
+    }
+
+    textarea.addEventListener('input', autoResize);
+
+    function initIMask() {
+        const phoneInput = document.getElementById('phone');
+        const maskOptions = {
+            mask: '+{38}(000)000-00-00',
+            lazy: false
+        };
+        const mask = new IMask(phoneInput, maskOptions);
+    }
+
+    function openFlowersForm() {
+        const form = document.getElementById('contactForm');
+        form.style.display = 'block';
+        const text = document.getElementById('flowerText');
+        text.style.display = 'none';
+    }
+
+    (function () {
+        emailjs.init({
+            publicKey: "FJmgnZGBWFsSNGNA1",
+        });
+    })();
+
+    function sendEmail(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const wishes = document.getElementById('wishes').value;
+
+        if (!name || !phone || !wishes) {
+            alert('Заповніть всі поля');
+            return;
+        }
+        console.log(
+            "Було оформлено замовлення на квіти по підписці." + "\n" +
+            "Iм'я: " + document.getElementById('name').value + "\n" +
+            "Номер: " + document.getElementById('phone').value + "\n" +
+            "Побажання на відкритці: " + document.getElementById('wishes').value
+        )
+
+        emailjs.send('service_9l0mkvd', 'template_jt35rmk', {
+            from_name: 'volodiakatewedding@gmail.com',
+            to_email: 'chornenkyy@gmail.com',
+            message: "Було оформлено замовлення на квіти по підписці." + "\n" +
+                "Iм'я: " + document.getElementById('name').value + "\n" +
+                "Номер: " + document.getElementById('phone').value + "\n" +
+                "Побажання на відкритці: " + document.getElementById('wishes').value
+        })
+            .then(function (response) {
+                const form = document.getElementById('contactForm');
+                form.style.display = 'none';
+                const postText = document.getElementById('post_form_text');
+                postText.style.display = 'block';
+            })
+
+    }
 </script>
 </html>
